@@ -586,8 +586,12 @@
 console.log(startParam);
 let numb1=document.getElementById("numb1");
 
-var decodedString = atob(encodedString);
-numb1.innerHTML = decodedString;
+var decodedString = atob(startParam);
+
+const obj = JSON.parse(decodedString);
+let number=obj.number;
+let price=obj.price;
+numb1.innerHTML = number;
 </script>
 </body>
 
