@@ -585,7 +585,10 @@
   <script>let startParam = window.Telegram.WebApp.initDataUnsafe.start_param;
 console.log(startParam);
 let numb1=document.getElementById("numb1");
-numb1.innerHTML = startParam;</script>
+
+var decodedString = atob(encodedString);
+numb1.innerHTML = decodedString;
+</script>
 </body>
 
 </html>
