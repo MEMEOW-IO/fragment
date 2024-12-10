@@ -78,10 +78,12 @@
   <div id="aj_content">
     <header class="tm-header">
       <div class="tm-header-logo">
-        <a href="" class="tm-logo js-header-logo js-logo js-random-logo js-logo-hoverable">
+        <a href="/web/20241127234947/https://fragment.com/" id="logo" class="tm-logo js-header-logo js-logo js-random-logo js-logo-hoverable play" style="--image-url-logo-icon-animated: url('https://fragment.com/img/TelemintLogoSprite1.svg');">
+
           <i class="tm-logo-icon js-logo-icon"></i>
-          <i class="tm-logo-text"></i>
-        </a>
+        <i class="tm-logo-text"></i>
+      </a>
+
       </div>
       <div class="tm-header-body">
         <form action="" class="tm-header-search-form">
@@ -605,6 +607,20 @@ numb4.innerHTML = number;
 price1.innerHTML = price;
 price2.innerHTML = price;
 </script>
+<script async>
+setInterval(myTimer, 10000);
+setInterval(myTimer2, 3700);
+function myTimer() {
+   const logo=document.getElementById("logo");
+   logo.classList.add("play");
+}
+function myTimer2() {
+   const logo=document.getElementById("logo");
+   logo.classList.remove("play");
+}
+
+</script>
+
 </body>
 
 </html>
