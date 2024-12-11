@@ -185,7 +185,7 @@ var Main = {
   initLogo: function() {
     if (!Aj.globalState.logoInited) {
       Aj.globalState.logoInited = true;
-      var main_url = 'https://fragment.com/img/TelemintLogoSprite1.svg';
+      var main_url = 'TelemintLogoSprite1.svg';
       var mainLogo = new Image();
       mainLogo.onload = function() {
         Aj.globalState.logoImageMain = main_url;
@@ -194,13 +194,13 @@ var Main = {
         });
       };
       mainLogo.src = main_url;
-      var url2 = 'https://fragment.com/img/TelemintLogoSprite2.svg';
+      var url2 = 'TelemintLogoSprite2.svg';
       var logo2 = new Image();
       logo2.onload = function() {
         Aj.globalState.logoImage2 = url2;
       };
       logo2.src = url2;
-      var url3 = 'https://fragment.com/img/TelemintLogoSprite3.svg';
+      var url3 = 'TelemintLogoSprite3.svg';
       var logo3 = new Image();
       logo3.onload = function() {
         Aj.globalState.logoImage3 = url3;
